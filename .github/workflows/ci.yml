@@ -1,7 +1,7 @@
 name: CI Pipeline
 
 on:
-  workflow_dispatch: # Allows manual triggering of the workflow
+  workflow_call:
 
 jobs:
 ##################################
@@ -9,7 +9,7 @@ jobs:
 ##################################
   testingTemplate:
     runs-on: ubuntu-latest
-    uses: .github\workflows\templates\test-template.yml
+    uses: .github/workflows/templates/test-template.yml
 
 # ##################################
 # # Testing
