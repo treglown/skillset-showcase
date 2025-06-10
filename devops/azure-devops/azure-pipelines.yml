@@ -1,0 +1,40 @@
+# This is a YAML pipeline used for building, testing and deploying my application. 
+
+trigger:
+- main
+- feature/early-doors
+
+variables: 
+- name: newVariable
+  value: 'This is a new variable'
+
+parameters: 
+- name: newParameter
+  type: string
+  default: ''
+
+
+jobs:
+- job: build
+  displayName: 'Build Job'
+  steps: 
+  - script: echo "Building the application..."
+    displayName: 'Build Step'
+
+- job: testing
+  displayName: 'Testing Job'
+  dependsOn: build
+  steps:
+  - script: echo "Running tests..."
+    displayName: 'Test Step'
+
+
+######################################
+### Deploy - Website application
+#######################################
+- job: deploy
+  displayName: 'Deploy Job'
+  dependsOn: testing
+  steps:
+  - script: echo "Deploying the application..."
+    displayName: 'Deploy Step'
