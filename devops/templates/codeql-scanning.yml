@@ -1,3 +1,4 @@
 # This template is used for vulnerability scanning using CodeQL.
 
+name: CodeQL Scanning
 

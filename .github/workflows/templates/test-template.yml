@@ -1,0 +1,13 @@
+name: Test template
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+
+jobs:
+  printPython:
+    runs-on: ubuntu-latest
+    steps:
+      - script: |
+          echo "This is a test template for printing Python version"
+          python --version
