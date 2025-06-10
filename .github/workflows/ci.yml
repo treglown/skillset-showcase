@@ -9,7 +9,7 @@ jobs:
 ##################################
   testingTemplate:
     runs-on: ubuntu-latest
-    uses: .github/workflows/templates/test-template.yml
+    uses: skillset-showcase/.github/workflows/templates/test-template.yml
 
 # ##################################
 # # Testing
