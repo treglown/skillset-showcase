@@ -9,8 +9,7 @@ jobs:
 ##################################
   testingTemplate:
     runs-on: ubuntu-latest
-    steps:
-      uses: .github\workflows\templates\test-template.yml
+    uses: .github\workflows\templates\test-template.yml
 
 # ##################################
 # # Testing
